@@ -25,7 +25,7 @@ const __dirname = path.resolve();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://mern-thinkboard-eight.vercel.app",
-  "https://mern-thinkboard-e5qe.onrender.com" // ✅ No trailing slash
+  "https://notes-1v2i.onrender.com" // ✅ No trailing slash
 ];
 
 // ✅ Apply CORS only once and correctly
