@@ -22,26 +22,10 @@ const __dirname = path.resolve();
 //   );
 // }
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://mern-thinkboard-eight.vercel.app",
-  "https://notes-1v2i.onrender.com" // ✅ No trailing slash
-];
-
-// ✅ Apply CORS only once and correctly
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  })
-);
-
+app.use(cors({
+  origin: "https://notes-lac-seven.vercel.app", // frontend Vercel URL
+  credentials: true
+}));
 
 
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
